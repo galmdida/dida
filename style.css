@@ -232,6 +232,9 @@ main #Projects ul{
     #side-drawer{
         display: none;
     }
+    main #Blog #services .service-desc p{
+        font-size: 1.25rem;
+    }
 }
 @media (max-width: 768px){
     #main-header nav{
