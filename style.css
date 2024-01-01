@@ -419,3 +419,106 @@ main ol{
 main ol li{
     height: 100%;
 }
+
+
+/* Form */
+#contact{
+    margin-bottom: 1rem;
+    background: linear-gradient(0deg, rgb(82, 170, 214), rgb(10,100,100));
+    padding: 12px;
+}
+
+#contact h2{
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+}
+
+#contact form{
+    width: 80%;
+    margin: auto;
+    background-color: rgb(220, 229, 240);
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+label{
+    margin-bottom: 0.5rem;
+    display: block; /* for top and bottom margin to work */
+    color: rgb(58,58,58);
+}
+
+/* Syling input element */
+input{
+    width: 100%;
+    display: block; /* make display block */
+    margin-bottom: 0.8rem; /* create space between input and button */
+    box-sizing: border-box; /* to make left and right spaces equal */
+    font: inherit; /* Get font from parent element */
+    border: 1px solid gray;
+    padding: 0.25rem;
+    color: rgb(134,134,134);
+}
+
+/* Styling input focused */
+input:focus{
+    color: rgb(145, 237, 240);
+    background-color: rgb(12, 77, 77);
+    border-color: rgb(12, 77, 77);
+}
+
+/* Style dropdown */
+select{
+    display: block; /* make display block */
+    margin-bottom: 0.8rem; /* create space between input and button */
+    box-sizing: border-box; /* to make left and right spaces equal */
+    font: inherit; /* Get font from parent element */
+    border: 1px solid gray;
+    padding: 0.25rem;
+    color: rgb(134,134,134);
+}
+
+/* Styling textarea */
+textarea{
+    display: block; /* make display block */
+    margin-bottom: 0.8rem; /* create space between input and button */
+    box-sizing: border-box; /* to make left and right spaces equal */
+    font: inherit; /* Get font from parent element */
+    border: 1px solid gray;
+    padding: 0.25rem;
+    color: rgb(134,134,134);
+}
+
+textarea:focus{
+    color: rgb(145, 237, 240);
+    background-color: rgb(12, 77, 77);
+    border-color: rgb(12, 77, 77);
+}
+
+/* Styling radio button */
+.form-inline-attribute{
+    display: flex;
+}
+
+.form-inline-attribute input{
+    width: auto;
+    margin-right: 1rem;
+}
+
+/* Styling button */
+button{
+    display: block; /* make display block */
+    font: normal 1rem "Roboto", sans-serif;
+    background-color: rgb(12, 77, 77);
+    color: white;
+    border: 1px solid rgb(12, 77, 77);
+    padding: 0.24rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hover effect for button */
+button:hover{
+    background-color: rgb(10, 116, 116);
+}
