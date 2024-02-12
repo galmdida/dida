@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,50 @@
     <link rel="stylesheet" href="/shared.css">
     <link rel="stylesheet" href="/skills.css">
 </head>
+
 <body>
     <header id="main-header">
         <a href="/index.html" id="logo">Galm Dida</a>
         <nav>
             <ul>
                 <li>
-                    <a href="/index.html">Home</a>
-                </li>
-                <li>
                     <a href="/about.html">About</a>
                 </li>
                 <li>
                     <a href="/blog.html">Blog</a>
                 </li>
-                <li>
-                    <a href="/skills.html">Skills</a>
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="training.html">Training</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research Support</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphics and Design</a>
+                        <a href="#">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
                 </li>
-                <li>
-                    <a href="/services.html">Services</a>
-                </li>
-                <li>
-                    <a href="/projects.html">Projects</a>
-                </li>
-                <li>
-                    <a href="/collaborate.html">Collaborate</a>
-                </li>
-                <li>
-                    <a href="/mentorship.html">Mentorship</a>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Adv. Excel</a>
+                        <a href="#">SQL</a>
+                        <a href="#">Power BI</a>
+                        <a href="#">SPSS</a>
+                        <a href="#">Python</a>
+                        <a href="#">NVivo</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphic Design</a>
+                        <a href="projects.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
                 </li>
             </ul>
         </nav>
@@ -62,13 +79,10 @@
                     <a href="/about.html">About</a>
                 </li>
                 <li>
-                    <a href="/skills.html">Skills</a>
+                    <a href="/skills.html">Skills & Services</a>
                 </li>
                 <li>
                     <a href="/blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="/services.html">Services</a>
                 </li>
                 <li>
                     <a href="/projects.html">Projects</a>
@@ -83,15 +97,850 @@
         </nav>
     </aside>
 
-
-
-
     <main>
+        <section id="data-analysis">
+            <h2>Data Analysis</h2>
+            <ul>
+                <li>
+                    <img src="software-img/excel.PNG" alt="">
+                    <div id="desc">
+                        <p>
+                            I love working with Ms. Excel. I have trained thousands of students and handled
+                            hundreds of
+                            projects in Ms. Excel. Specifically, I love Pivot tables, Lookups, Scenario analysis,
+                            Excel
+                            macro and VBA and of course conditional formatting, formulas and funtions.
+                        </p>
+
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                            <a href="">My Projects</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="software-img/spss.PNG" alt="">
+                    <div id="desc">
+                        <p>
+                            Statistics is my cup of coffee, so is SPSS. I have trained thousands of students and
+                            handled
+                            hundreds of projects in SPSS. I love its simplicity. Choosing the right statistical tests,
+                            generating and interprating the output, and the
+                            formatting presentation make working with SPSS
+                            fun.
+                        </p>
+
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                            <a href="">My Projects</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="software-img/mysql.PNG" alt="">
+                    <div id="desc">
+                        <p>
+                            Data modeling is big part of analystics. I have trained thousands of students and designed
+                            hundred of databases. I design databases and extract information from relational databases.
+                        </p>
+
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                            <a href="">My Projects</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="software-img/python.PNG" alt="">
+                    <div id="desc">
+                        <p>
+                            Python is one of the most popular pragramming language for data analytics, visualization,
+                            data
+                            science and machine learning. From statistical analysis to visualization, DS to ML, python
+                            is most powerful language of 21st centuary.
+                        </p>
+
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                            <a href="">My Projects</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="software-img/powerbi.PNG" alt="">
+                    <div id="desc">
+                        <p>
+                            Data visualization simplifies presentation and understanding of the analysis for
+                            non-technical
+                            personnel. Visuals are first step towards action on the insight from data. I can generate
+                            dashboards in Power BI from varied data sources to generate insight.
+                        </p>
+
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                            <a href="">My Projects</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="software-img/nvivo.PNG" alt="">
+                    <div id="desc">
+                        <p>
+                            Most researchers avoid qualitative methods due to complexity in the analysis. I have strong
+                            a
+                            background in qualitative analysis using NVivo.
+                        </p>
+
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                            <a href="">My Projects</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="monitoring-evaluation">
+            <h2>
+                Monitoring and Evaluation
+            </h2>
+            <ul>
+                <li>
+                    <img src="mande-img/informing.PNG" alt="">
+                    <h3>Understanding Issues</h3>
+                    <div id="desc">
+                        <p>
+                            Understanding the problem is key before diving into the project. More information can be
+                            acquired through literature review, capture mission, stakeholder analysis and problem
+                            analysis.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="mande-img/framework.PNG" alt="">
+                    <h3>M&E Framework</h3>
+                    <div id="desc">
+                        <p>
+                            M&E frameworks are crucial in designing approach. The main frameworks are; theory of change,
+                            conceptual framework, result framework, and logic framework.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="mande-img/risk.PNG" alt="">
+                    <h3>M&E Risks and Assumptions</h3>
+                    <div id="desc">
+                        <p>
+                            Risks and assumptions make important part of project design and implementation. The project
+                            plan should cover risk and assumption evaluation, risk monitoring framework, and strategies
+                            for mitigating risk.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="mande-img/gender.PNG" alt="">
+                    <h3>Ensuring gender and social aspect</h3>
+                    <div id="desc">
+                        <p>
+                            Interventions should be gender aware to avoid imbalances. Here, we will ensure gender
+                            balance for the projects.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="mande-img/plan.PNG" alt="">
+                    <h3>MEAL plan</h3>
+                    <div id="desc">
+                        <p>
+                            MEAL plan foresees all the activities, milestones, impacts and barriers in acheiving the
+                            project objectives.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="mande-img/indicator.PNG" alt="">
+                    <h3>M&E Indicators</h3>
+                    <div id="desc">
+                        <p>
+                            Indicators measure different variables and results within the projects. A strong MEL plan
+                            will have a combination of input, output, outcome
+                            and impact indicators.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="mande-img/collection.PNG" alt="">
+                    <h3>Data collection</h3>
+                    <div id="desc">
+                        <p>
+                            For valid and reliable insight, quality data has to be collected using various tools. I
+                            support in designing data collection tools and facilitating KII and FGD.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="mande-img/analysis.PNG" alt="">
+                    <h3>Data analysis and reporting</h3>
+                    <div id="desc">
+                        <p>
+                            If we do not extract quality insight for decision making, the whole effort in monitoring and
+                            evaluation is a waste of resources. I support qualitative and quantitative data analysis and
+                            writing report to guide decision making.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Enroll Course</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="research">
+            <h2>
+                Proposal and Research
+            </h2>
+            <h4>Research Preliminaries</h4>
+            <ul>
+                <li>
+                    <img src="research-img/topic.PNG" alt="">
+                    <h3>Research topic</h3>
+                    <div id="desc">
+                        <p>
+                            Research topic is the integral part of the research paper. Choosing the right topic will
+                            help the researcher to navigate the journey with a lot of each. The other side is dark.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/abstract.PNG" alt="">
+                    <h3>Research abstract</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>Research Chapter one</h4>
+            <ul>
+                <li>
+                    <img src="research-img/background.PNG" alt="">
+                    <h3>Background of Study</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/problem.PNG" alt="">
+                    <h3>Statement of problem</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/objectives.PNG" alt="">
+                    <h3>Objectives and research questions</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/scope.PNG" alt="">
+                    <h3>Scope of the study</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/conceptual.PNG" alt="">
+                    <h3>Conceptual framework</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>Research Chapter two</h4>
+            <ul>
+                <li>
+                    <img src="research-img/literature.PNG" alt="">
+                    <h3>Literature Review</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/literature.PNG" alt="">
+                    <h3>Theoretical framework</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>Research Chapter 3</h4>
+            <ul>
+                <li>
+                    <img src="research-img/sampling-procedure.PNG" alt="">
+                    <h3>Sampling procedure</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/sample-size.PNG" alt="">
+                    <h3>Sample size determination</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/validity.PNG" alt="">
+                    <h3>Validity and reliability</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/data-analysis.PNG" alt="">
+                    <h3>Data analysis techniques</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/ethics.PNG" alt="">
+                    <h3>Ethical considerations</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>Appendixes</h4>
+            <ul>
+                <li>
+                    <img src="research-img/data-collection.PNG" alt="">
+                    <h3>Data collection tools design</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/reference.PNG" alt="">
+                    <h3>Referencing</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/formatting.PNG" alt="">
+                    <h3>Document formating</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/plagiarism.PNG" alt="">
+                    <h3>Plagiarism report</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>Data Analysis and Interpretation</h4>
+            <ul>
+                <li>
+                    <img src="research-img/data-cleaning.PNG" alt="">
+                    <h3>Data dictionary, coding, data entry and cleaning</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/exploratory-analysis.PNG" alt="">
+                    <h3>Exploratory/ descriptive analysis only</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/inferential.PNG" alt="">
+                    <h3>Inferential analysis only</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/visualization.PNG" alt="">
+                    <h3>Data visualization only</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/apa.PNG" alt="">
+                    <h3>Report writing in APA style</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>Further Support</h4>
+            <ul>
+                <li>
+                    <img src="research-img/slides.PNG" alt="">
+                    <h3>Slides for presentation</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="research-img/mock.PNG" alt="">
+                    <h3>Mock presentation</h3>
+                    <div id="desc">
+                        <p>
+                            Research abstract is the snapshot of the whole paper. It briefly inform the reader what to
+                            expect. Writing well organized research abstract equally shows how good the content is.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="business-writing">
+            <h2>Business Support</h2>
+            <ul>
+                <li>
+                    <img src="business-img/plan.PNG" alt="">
+                    <h3>Business plan</h3>
+                    <div id="desc">
+                        <p>
+                            Business plan gives you guidance for starting and managing the business. It is a map of your
+                            business as it helps you structure, run and grow your business. Let us create an actionable
+                            business plan for you.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="business-img/funding.PNG" alt="">
+                    <h3>Funding proposal</h3>
+                    <div id="desc">
+                        <p>
+                            Startup capital might not be available with your business idea. There are funding
+                            organizations across the nations. I would help you to pitch your business idea that wins the
+                            donor.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="business-img/report.PNG" alt="">
+                    <h3>Business report</h3>
+                    <div id="desc">
+                        <p>
+                            Most businesses have periodic reports. This might be operations, sales, markets, risks and
+                            other factors. I can help in mining your business data to come up with insightful report for
+                            decision makers.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="business-img/audit.PNG" alt="">
+                    <h3>External accounting and audit</h3>
+                    <div id="desc">
+                        <p>
+                            External accounting is paramount for both compliance and internal accountability. We offer
+                            professional auding and accounting services for both small and medium enterprises.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="business-img/market-research.PNG" alt="">
+                    <h3>Market research</h3>
+                    <div id="desc">
+                        <p>
+                            Staring a new business or strategizing an existing business require thorough market
+                            research. With my team, we offer comprehensive market research for a startup and established
+                            businesses.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="business-img/magazine.PNG" alt="">
+                    <h3>Newsletter and magazine</h3>
+                    <div id="desc">
+                        <p>
+                            Writing is efficient for business growth. Periodic newsletters and magazine would enhance
+                            your presence to the prospect. I design and write intuitive business newsletters and
+                            magazines for various industries on different topics.
+                        </p>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="graphics-design">
+            <h2>Graphics and Design</h2>
+            <ul>
+                <li>
+                    <img src="graphics-img/flyer.PNG" alt="">
+                    <div id="desc">
+                        <h3>Flyer design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="graphics-img/bronchure.PNG" alt="">
+                    <div id="desc">
+                        <h3>Bronchure design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="graphics-img/poster.PNG" alt="">
+                    <div id="desc">
+                        <h3>Poster design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="graphics-img/invitation.PNG" alt="">
+                    <div id="desc">
+                        <h3>Invitation design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="graphics-img/catalogue.PNG" alt="">
+                    <div id="desc">
+                        <h3>Catalogue design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="graphics-img/magazine.PNG" alt="">
+                    <div id="desc">
+                        <h3>Magazine design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="graphics-img/sticker.PNG" alt="">
+                    <div id="desc">
+                        <h3>Stiker design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="graphics-img/menu.PNG" alt="">
+                    <div id="desc">
+                        <h3>Menu design</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="web-design">
+            <h2>Web Design and Development</h2>
+            <ul>
+                <li>
+                    <img src="web-img/personal.PNG" alt="">
+                    <div id="desc">
+                        <h3>Personal portfolio</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="web-img/ngo.PNG" alt="">
+                    <div id="desc">
+                        <h3>NGO website</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="web-img/business.PNG" alt="">
+                    <div id="desc">
+                        <h3>Business website</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="web-img/ecommerce.PNG" alt="">
+                    <div id="desc">
+                        <h3>Ecommerce website</h3>
+                        <div id="action">
+                            <a href="">Hire Me</a>
+                            <a href="">My projects</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
     </main>
-
-
-
 
     <footer>
         <div id="footer-content">
@@ -136,7 +985,7 @@
             </ul>
         </div>
         <p>
-            Galm Dida &#169; 2023
+            Galm Dida &#169; 2024
         </p>
     </footer>
 
