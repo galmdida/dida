@@ -15,7 +15,7 @@ h2{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    width: 25rem;
+    /* width: 25rem; */
     height: 15rem;
     box-shadow: 1px 2px 6px black;
 }
@@ -71,4 +71,11 @@ main p{
 
 #footer h2{
     color: white;
+}
+
+/* Responsive image */
+@media (max-width: 768px){
+    #mmf img{
+        width: 80%;
+    }
 }
