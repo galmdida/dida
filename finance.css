@@ -1,0 +1,65 @@
+/* Format h1 */
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(35,35,35);
+}
+main h3{
+    font-size: 1.5rem;
+    color: rgb(35,35,35);
+    text-align: center; 
+}
+
+/* Make the highlight section grid */
+#finance{
+    width: 90%;
+    margin: 0.8rem auto;
+    text-align: center;
+}
+
+#finance img{
+    width: 12.5rem;
+    height: 10rem;
+    border-radius: 6px;
+    /* object-fit: cover; */
+}
+
+#finance ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#finance li{
+    padding: 0.8rem;
+    box-shadow: 2px 4px 6px black;
+    border-radius: 6px;
+}
+
+main p{
+    color: rgb(134,134,134);
+    font-size: 1.5rem;
+}
+
+#finance #desc{
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#finance #action a{
+    background-color: rgb(202, 137, 16);
+    padding: 0.3rem 0.5rem;
+    color: white;
+    border-radius: 4px;
+}
+
+#finance #action a:hover{
+    background-color: rgb(247, 167, 19);
+    color: rgb(80, 78, 78);
+}
