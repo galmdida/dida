@@ -63,3 +63,13 @@ main p{
     background-color: rgb(247, 167, 19);
     color: rgb(80, 78, 78);
 }
+
+/* making responsive */
+/* Responsive image */
+@media(max-width: 769px){
+    main #finance ul{
+        padding: 0;
+        margin-top: 1.2rem;
+        grid-template-columns: 1fr;
+     }
+ }
