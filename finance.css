@@ -72,4 +72,9 @@ main p{
         margin-top: 1.2rem;
         grid-template-columns: 1fr;
      }
+     main #finance ul li{
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+    }
  }
