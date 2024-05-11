@@ -53,28 +53,87 @@ main p{
 }
 
 #finance #action a{
-    background-color: rgb(202, 137, 16);
+    background-color: rgb(19, 16, 202);
     padding: 0.3rem 0.5rem;
     color: white;
     border-radius: 4px;
 }
 
 #finance #action a:hover{
-    background-color: rgb(247, 167, 19);
-    color: rgb(80, 78, 78);
+    background-color: rgb(5, 4, 75);
+    color: white;
+}
+
+/* make footer h2 white */
+#footer h2{
+    color: white;
 }
 
 /* making responsive */
 /* Responsive image */
+/* Small screens and laptops */
 @media(max-width: 769px){
     main #finance ul{
         padding: 0;
         margin-top: 1.2rem;
         grid-template-columns: 1fr;
      }
+ }
+/* Ipad and tablets */
+@media(max-width: 768px){
+   main #finance ul{
+        padding: 0;
+        margin-top: 1.2rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    #first{
+        margin-top: 0;
+        padding: 0;
+    }
+    main h4{
+        margin-top: 2rem;
+        margin-bottom: 0;
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+    main #finance ul p{
+        font-size: 1rem;
+     }
+     main #finance #desc{
+        height: auto;
+     }
      main #finance ul li{
+        padding: 0.8rem;
+        box-shadow: 1px 1.5px 2px black;
+     }
+}
+
+/* Mobile phones */
+@media(max-width: 480px){
+    main ul li img{
+        object-fit: cover;
+        width: 100%;
+        height: 18.75rem;
+    }
+    main ul li{
         flex-direction: column;
         height: 100%;
         padding: 0;
     }
- }
+}
+
+
+/* Manage action in smaller screens */
+/* Mobile phones */
+@media(max-width: 768px){
+    main #action{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+    }
+    main #action a{
+        margin-bottom: 0.8rem;
+    }
+}
