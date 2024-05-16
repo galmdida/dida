@@ -1,0 +1,21 @@
+#highlight{
+    height: 10rem;
+    background-color: black;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+#highlight a{
+    background-color: rgb(202, 137, 16);
+    padding: 4rem 0.5rem;
+    color: white;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+#highlight a:hover{
+    background-color: rgb(247, 167, 19);
+    color: rgb(80, 78, 78);
+}
