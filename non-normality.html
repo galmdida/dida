@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="non-normality.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/school-book.min.css">
+
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Normality</title>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <a href="index.html" id="logo">Galm Dida</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Mentorship
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Career</a>
+                        <a href="finance.html">Finance</a>
+                        <a href="#">Wellness</a>
+                        <a href="#">My Books</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="training.html">Training</a>
+                        <a href="mande.html">M&E</a>
+                        <a href="research.html">Research Support</a>
+                        <a href="bus-support.html">Business Support</a>
+                        <a href="graphic-design.html">Graphics and Design</a>
+                        <a href="web-design.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Adv. Excel</a>
+                        <a href="#">SQL</a>
+                        <a href="#">Power BI</a>
+                        <a href="#">SPSS</a>
+                        <a href="#">Python</a>
+                        <a href="#">NVivo</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphic Design</a>
+                        <a href="projects.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#side-drawer" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+
+
+    <aside id="side-drawer">
+        <header>
+            <a href="#" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li>
+                    <a href="/blog.html">Blog</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Mentorship
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Career</a>
+                        <a href="finance.html">Finance</a>
+                        <a href="#">Wellness</a>
+                        <a href="#">My Books</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="training.html">Training</a>
+                        <a href="mande.html">M&E</a>
+                        <a href="research.html">Research Support</a>
+                        <a href="bus-support.html">Business Support</a>
+                        <a href="graphic-design.html">Graphics and Design</a>
+                        <a href="web-design.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Adv. Excel</a>
+                        <a href="#">SQL</a>
+                        <a href="#">Power BI</a>
+                        <a href="#">SPSS</a>
+                        <a href="#">Python</a>
+                        <a href="#">NVivo</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphic Design</a>
+                        <a href="projects.html">Website Design</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section id="non-normality">
+            <h1>DEALING WITH NON-NORMAL DATA</h1>
+            <img src="norm-blog/stat.PNG" class="first-img" alt="">
+            <h2>What to do if your data does not follow normal distribution?</h2>
+            
+            <h3>Non-normality</h3>
+
+            <p>
+                So far we have tested normality by both graphical and statistical methods, the question is what will
+                happen if the graph and statistics shows deviation from from normality.
+            </p>
+
+            <p>
+                <strong>The first step is to know why we have deviation from normality</strong>
+            </p>
+
+            <p>
+                It is important to note
+                that many processes or data sets naturally fit a non-normal distribution. For example, the number of
+                accidents will tend to fit a Poisson distribution and lifetimes of products usually fit a Weibull
+                distribution. However, there may be times when your data is supposed to fit a normal distribution, but
+                does not. For example, time taken to reach office from home data is usually supposed to fit a normal
+                distribution. If you face a non-normal distribution for such data sets, it is advised to check for the
+                below reasons in your data and correct if needed.
+            </p>
+
+            <ol type="i">
+                <li>
+                    <strong>Extreme values/ Outliers</strong> - too many extreme values in a data set will result in a
+                    skewed distribution. Normality of data can be achieved by cleaning the data. This involves
+                    determining measurement errors, data-entry errors and outliers, and removing them from the data for
+                    valid reasons.
+                    <p>
+                        It is important that outliers are identified as truly special reasons (measurement errors,
+                        missing data, data corruptions, or rare events).
+                        In such cases, the extreme values could be identified and removed in order to make the
+                        distribution more Gaussian.
+                        Dealing with these extreme values may require domain expertise or consultation with a domain
+                        expert in order to both design the criteria for identifying outliers and then removing them from
+                        the data sample and all data samples that you or your model expect to work with in the future.
+                    </p>
+                    <p>
+                        <strong>Note:</strong> The nature of normally distributed data is that a small percentage of
+                        extreme values can be expected; not every outlier is caused by a special reason. Extreme values
+                        should only be explained and removed from the data if there are more of them than expected under
+                        normal conditions
+                    </p>
+                </li>
+                <li>
+                    <strong>Subgroups / Overlap of two or more processes</strong> - data may not be normally distributed
+                    because it actually comes from more than one process, operator or shift, or from a process that
+                    frequently shifts. If two or more data sets that would be normally distributed on their own are
+                    overlapped, data may look bimodal or multimodal – it will have two or more most-frequent values
+                    (mode, mean, median - central location).
+                    <p>
+                        The remedial action for these situations is to determine which X’s cause bimodal or multimodal
+                        distribution and then stratify the data. The data should be checked again for normality and
+                        afterward the stratified processes can be worked with separatel
+                    </p>
+                </li>
+                <li>
+                    <strong>Insufficient data discrimination</strong> - Round-off errors or measurement devices with
+                    poor resolution/precision can make truly continuous and normally distributed data look discrete and
+                    non-normal.
+                    <p>
+                        The remedial action for this situation is, we should use a more accurate measurement system or
+                        should collect more data points to overcome insufficient data discrimination or an insufficient
+                        number of different values.
+                    </p>
+                </li>
+                <li>
+                    <strong>Smaller sample size</strong> - One common reason that a data sample is non-Gaussian is
+                    because the size of the data sample is too small. For example, if you look at distribution of the
+                    height of 50 students in a particular class, you will see that it follows a normal distribution.
+                    However, if you randomly chose just three students from the same class, it may follow a uniform
+                    distribution. Or a skewed distribution as well depending on which students you choose.
+                    <p>
+                        Many statistical methods were developed where data was scarce. Hence, the minimum number of
+                        samples for many methods may be as low as 20 or 30 observations.
+
+                        Nevertheless, given the noise in your data, you may not see the familiar bell-shape or fail
+                        normality tests with a modest number of samples, such as 50 or 70.
+                    </p>
+                    <p>
+                        The remedial action for this situation is, we you can collect more data. Thanks to the law of
+                        large numbers, the more data that you collect, the more likely your data will be able to used to
+                        describe the underlying population distribution.
+                    </p>
+                </li>
+                <li>
+                    <strong>Sort data/ Resolutionted data</strong> - Data collected from a normally distributed process
+                    can also fit a non-normal distribution if it represents just a sample / subset of the total output
+                    of the process. This happens when we sort the data before analysing it (example, configuration of
+                    the mechanism making the observation, data is passing through a quality-control process, resolution
+                    of the database used to store the data).
+                    <p>
+                        Suppose there is a ring manufacturing process where the target is to produce rings with a
+                        diameter of 10 CM. The USL and LSL are 10.25 CM and 9.75 CM respectively. If the ring diameter
+                        data were collected from such a process and all values outside the specification limits were
+                        removed, it will show a non-normal distribution (uniform distribution), even though the data
+                        collected will originally be normally distributed.
+                    </p>
+                    <p>
+                        The remedial action for this situation is to increase resolution. That is, instead of keeping
+                        data in a predefined range, allow you data to spread as much as the process is.
+                    </p>
+                </li>
+                <li>
+                    <strong>Values close to zero or a natural limit</strong> - If a process has many values close to
+                    zero or close to a natural process boundary, the data distribution will skew to the right or left.
+                    <p>
+                        The remedial action for this situation is, a transformation, such as the Box-Cox power
+                        transformation, may help make data normal. In this method, all data is raised, or transformed,
+                        to a certain exponent, indicated by a Lambda value. When we compare transformed data, we should
+                        transform everything under comparison in the same way.
+                    </p>
+                    <p>
+                        <strong>Take note:</strong> None of the transformation methods provide a guarantee of a normal
+                        distribution. Always check with a probability plot to determine whether normal distribution can
+                        be assumed after transformation.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                <strong>If the non-normality is not caused by these above reasons</strong>
+            </p>
+            <p>
+                <strong>Data follows different distribution</strong> - In addition to above-mentioned reasons where a
+                normally distributed process data can show as non-normal, there are many data types, which follow a
+                non-normal distribution by nature. In such cases, you should analyse the data using the tesdo not assume
+                normality.
+            </p>
+            <ol type="a">
+                <p>
+                    <strong class="special">There are may data types that follow a non-normal distribution by nature. Examples include:</strong>
+                </p>
+                <li>
+                    <strong>Weibull distribution</strong> - found with life data such as survival times of a product
+                </li>
+                <li>
+                    <strong>Log-normal distribution</strong> - found with length data such as heights.
+                </li>
+                <li>
+                    <strong>Largest-extreme-value distribution</strong> - found with data such as the longest down-time
+                    each day.
+                </li>
+                <li>
+                    <strong>Exponential distribution</strong> - found with growth data such as bacterial growth.
+                </li>
+                <li>
+                    <strong>Poisson distribution</strong> - found with rare events such as number of accidents.
+                </li>
+                <li>
+                    <strong>Binomial distribution</strong> - found with “proportion” data such as percent defectives.
+                </li>
+            </ol>
+
+            <ol type="i">
+                <p>
+                    <strong class="special">In such cases, you have three options</strong>
+                </p>
+                <li>
+                    <strong>Run parametric test</strong> - You may still be able to run the parametric tests if your sample size is large enough (usually over 20 items). By the law of large numbers, you may assume normality.
+                </li>
+                <li>
+                    <strong>Transform distribution/ Normalize</strong> - You can also choose to transform the data with a function, forcing it to fit a normal model. Three common data transformations are reciprocal transformation, log transformation, and square-root transformation. There is no guarantee that a specific transformation will ensure your data meets the assumption of normality, so it is worth conducting several transformations on your data.
+                </li>
+                <li>
+                    <strong>Run non-parametric test</strong> -  If you have a very small sample, a sample that is skewed, or does not meet the assumption of equal variance, or one that naturally fits another distribution type, you may want to run a non parametric test.
+                        <ol type="a">
+                            <p>
+                                <strong class="special">Examples of non-parametric tests are:</strong>
+                            </p>
+                            <li>
+                                <strong>Wilcoxon Signed Rank</strong> - Parametric Equivalent: Z-test
+                            </li>
+                            <li>
+                                <strong>Mann-Whitney</strong> - Parametric Equivalent : 2 Indepedent Samples T
+                            </li>
+                            <li>
+                                <strong>Kruskal-Wallis</strong> - Parametric Equivalent: 1 Way ANOVA
+                            </li>
+                            <li>
+                                <strong>Friedman</strong> - Parametric Equivalent: 2 Way ANOVA
+                            </li>
+                        </ol>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <ul id="footer">
+                <h2>Important Links</h2>
+                <li class="footer">
+                    <a href="/">Home</a>
+                </li>
+                <li class="footer">
+                    <a href="/services.html">Services</a>
+                </li>
+                <li class="footer">
+                    <a href="/projects.html">Projects</a>
+                </li>
+                <li class="footer">
+                    <a href="/services.html">About</a>
+                </li>
+            </ul>
+            <ul id="footer">
+                <h2>Social Media</h2>
+                <li>
+                    <a href="https://wa.me/254741370493"><img src="icons/whatsapp ico.PNG" alt="whatsapp"></a>
+                </li>
+                <li>
+                    <a href=""><img src="icons/facebook.png" alt="facebook"></a>
+                </li>
+                <li>
+                    <a href=""><img src="icons/insta.png" alt="instagram"></a>
+                </li>
+            </ul>
+            <ul id="footer">
+                <h2>Contact Details</h2>
+                <li>
+                    Office: Mwalimu Hotel, Kisii
+                </li>
+                <li>
+                    Tell: +254741370493
+                </li>
+                <li>
+                    Working Hours: 9am - 4pm EAT
+                </li>
+            </ul>
+        </div>
+        <p>
+            Galm Dida &#169; 2024
+        </p>
+    </footer>
+
+</body>
+
+</html>
