@@ -53,7 +53,8 @@ h4{
     width: 50%;
     /* width: 25rem; */
     height: 15rem;
-    box-shadow: 1px 2px 6px black;
+    box-shadow: 2px 3px 6px black;
+    border-radius: 6px;
 }
 main h3{
     color: rgb(192, 64, 47);
