@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="non-normality.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/school-book.min.css">
+
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Outlier in python</title>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <a href="index.html" id="logo">Galm Dida</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Mentorship
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Career</a>
+                        <a href="finance.html">Finance</a>
+                        <a href="#">Wellness</a>
+                        <a href="#">My Books</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="training.html">Training</a>
+                        <a href="mande.html">M&E</a>
+                        <a href="research.html">Research Support</a>
+                        <a href="bus-support.html">Business Support</a>
+                        <a href="graphic-design.html">Graphics and Design</a>
+                        <a href="web-design.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Adv. Excel</a>
+                        <a href="#">SQL</a>
+                        <a href="#">Power BI</a>
+                        <a href="#">SPSS</a>
+                        <a href="#">Python</a>
+                        <a href="#">NVivo</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphic Design</a>
+                        <a href="projects.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#side-drawer" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+
+
+    <aside id="side-drawer">
+        <header>
+            <a href="#" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li>
+                    <a href="/blog.html">Blog</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Mentorship
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Career</a>
+                        <a href="finance.html">Finance</a>
+                        <a href="#">Wellness</a>
+                        <a href="#">My Books</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="training.html">Training</a>
+                        <a href="mande.html">M&E</a>
+                        <a href="research.html">Research Support</a>
+                        <a href="bus-support.html">Business Support</a>
+                        <a href="graphic-design.html">Graphics and Design</a>
+                        <a href="web-design.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Adv. Excel</a>
+                        <a href="#">SQL</a>
+                        <a href="#">Power BI</a>
+                        <a href="#">SPSS</a>
+                        <a href="#">Python</a>
+                        <a href="#">NVivo</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphic Design</a>
+                        <a href="projects.html">Website Design</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section id="non-normality">
+            <h1>HANDLING OUTLIERS IN PYTHON</h1>
+            <img src="norm-blog/stat.PNG" class="first-img" alt="">
+            <h2>
+                Introduction to outliers
+            </h2>
+
+            <h3>What is an outlier?</h3>
+
+            <p>
+                <strong>Outliers</strong> are extreme values within the data set. These are the data points that
+                significantly vary from expected values - either being extremely larger or smaller. Assuming your data
+                follows gussian distribution, any values that fall outside three standard deviations from the mean are
+                typically considered outliers.
+            </p>
+
+            <p>
+                <strong>Common cause of outliers can be grouped into four categories:</strong>
+            </p>
+
+            <ol type="i">
+                <li>
+                    <strong>Human, measurement/instrument and experimental errors</strong> - The outliers in the data
+                    sets can be caused by human, measument/instruments and experimental errors. Lets break each of them
+                    down and have a look.
+                    <p>
+                        <strong>Human error/ intention</strong> - Outliers in the data might be due to errors while
+                        manually entering data, such as typo. For example, you are entering the monthly salaries of
+                        employees, instead of typing 1,000 you type 10,000. Such errors can easily be detected and
+                        understood. The correction measures involves fixing typo or possibly remeasuring the person or
+                        the item. If this is not possible, you must delete the data value because you know it is an
+                        incorrect value. Individual might also include dummy outliers in a dataset to test detection
+                        methods
+                    </p>
+                    <p>
+                        <strong>Measument/ Instrumental errors</strong> - Using faulty instrument or poor reading of the
+                        measurement might lead to an outlier. Rereading or dropping the errors caused by measurements or
+                        instruments are right options.
+                    </p>
+                    <p>
+                        <strong>Experimental errors</strong> - These are the errors from the data extraction process or
+                        experiment planning or execution.
+                    </p>
+                </li>
+                <li>
+                    <strong>Sampling error</strong> - Inferential statistics use samples to draw conclusions about a
+                    specific population. Studies should carefully define a population, and then draw a random sample
+                    from it specifically. That’s the process by which a study can learn about a population.
+                    <p>
+                        Unfortunately, your study might accidentally obtain an item or person that is not from the
+                        target population. There are several ways this can occur. For example, unusual events or
+                        characteristics can occur that deviate from the defined population. Perhaps the experimenter
+                        measures the item or subject under abnormal conditions. In other cases, you can accidentally
+                        collect an item that falls outside your target population, and, thus, it might have unusual
+                        characteristics.
+                    </p>
+                    <p>
+                        If you can establish that an item or person does not represent your target population, you can
+                        remove that data point. However, you must be able to attribute a specific cause or reason for
+                        why that sample item does not fit your target population.
+                    </p>
+                </li>
+                <li>
+                    <strong>Natural variation</strong> - The previous causes of outliers are bad things. They represent
+                    different types of problems that you need to correct. However, natural variation can also produce
+                    outliers—and it’s not necessarily a problem.
+                    <p>
+                        All data distributions have a spread of values. Extreme values can occur, but they have lower
+                        probabilities.
+
+                        If your sample size is large enough, you’re bound to obtain unusual values. In a normal
+                        distribution, approximately 1 in 340 observations will be at least three standard deviations (3
+                        SDs) away from the mean. However, random chance might include extreme values in smaller
+                        datasets. In other words, the process or population you’re studying might produce weird values
+                        naturally. There’s nothing wrong with these data points. They’re unusual, but they are a normal
+                        part of the data distribution.
+                    </p>
+                    <p>
+                        Infact, <strong>outliers are very informative</strong> when you are looking for unusual values in your data. They are valueable in detecting credit card fraud, fraudulent loan applications, phishing emails, spam emails and messages, intrusion in the networks, Activity monitoring, Network performance, Satellite image analysis, novelties in images, mislabelled data, and many more.
+                    </p>
+                    <p>
+                        If the extreme value is a legitimate observation that is a natural part of the population you’re studying, you should leave it in the dataset.
+                    </p>
+               </li>
+            </ol>
+            <p>
+                <strong>Types of outliers</strong>
+            </p>
+            <ol type="a">
+                <p>
+                    <strong class="special">There are two types of outliers</strong>
+                </p>
+                <li>
+                    <strong>Univariate outliers</strong> - is an extreme value that relates to just one variable. For example, Sultan Kösen is currently the tallest man alive, with a height of 8ft, 2.8 inches (251cm). This case would be considered a univariate outlier as it’s an extreme case of just one variable/features of the people under investigation, which is height. (Here we are focusing only on definition, later, we will talk about detection and treatment of each type of outliers). 
+                </li>
+                <li>
+                    <strong>Multivariate outliers</strong> - let us imagine a cohort of human beings. An observation of a 5 ft 2 in (157 cm) tall person will not be surprising since it is quite a typical height. An observation of 64 lbs (29 kg) will not be surprising either, since many children have this weight. However, weighting 64 lbs and being 5 ft 2 in tall is surprising. This example is Lizzie Velasquez, born with a Marfanoid–progeroid–lipodystrophy syndrome that prevents her from gaining weight or accumulating body fat. Values that become surprising when several dimensions are taken into account are called multivariate outliers. Multivariate outliers are very important to detect, for example before performing structural equation modeling (SEM), where multivariate outliers can easily jeopardize fit indices. (Here we are focusing only on definition, later, we will talk about detection and treatment of each type of outliers).
+                </li>
+            </ol>
+
+            <ol type="i">
+                <p>
+                    <strong class="special">Besides the distinction between univariate and multivariate outliers, you’ll  see outliers categorized as any of the following:</strong>
+                </p>
+                <li>
+                    <strong>Global Outliers (aka Point Anomalies)</strong> - A data point is considered a global outlier if its value is far outside the entirety of the data set in which it is found (similar to how “global variables” in a computer program can be accessed by any function in the program).
+                    
+                    <p>
+                        <strong>Layman's example;</strong> A plane landing on a highway is a global outlier because it’s a truly rare event that a plane would have to land there.
+                    </p>
+                    
+                    <p>
+                        <strong>Application example;</strong> A banking customer who normally deposits no more than $1000 a month in checks at a local ATM suddenly makes two cash deposits of $5000 each in the span of two weeks is a global anomaly because this event has never before occurred in this customer’s history. The time series data of their weekly deposits would show an abrupt recent spike. Such a drastic change would raise alarms as these large deposits could imply illicit commerce or money laundering.
+                    </p> 
+                </li>
+
+                <li>
+                    <strong>Contextual Outliers (aka Conditional Anomalies)</strong> - are data points that deviate significantly from the expected behavior within a specific context or subgroup. Contextual outliers may not be outliers when considered in the entire dataset, but they exhibit unusual behavior within a specific context or subgroup. The “context” is almost always temporal in time-series data, such as records of a specific quantity over time.
+                    
+                    <p>
+                        <strong>Layman's example;</strong> If the highway was congested with traffic that would be a contextual outlier if it was happening at 3 a.m. when traffic doesn’t usually start until later in the morning when people are heading to work.
+                    </p>
+                    
+                    <p>
+                        <strong>Application example;</strong> A sudden surge in order volume at an eCommerce company, as seen in that company’s hourly total orders for example, could be a contextual outlier if this high volume occurs outside of a known promotional discount or high volume period like Black Friday. Could this stampede be due to a pricing glitch which is allowing customers to pay pennies on the dollar for a product?
+                    </p> 
+                </li>
+
+                <li>
+                    <strong>Collective Outliers</strong> - are groups of data points that collectively deviate significantly from the overall distribution of a dataset. Collective outliers may not be outliers when considered individually, but as a group, they exhibit unusual behavior. In time series data, one way this can manifest is as normal peaks and valleys occurring outside of a time frame when that seasonal sequence is normal or as a combination of time series that is in an outlier state as a group.
+                    
+                    <p>
+                        <strong>Layman's example;</strong> And if every car on the freeway was moving to the left lane at the same time that would be a collective outlier because although it’s definitely not rare that people move to the left lane, it is unusual that all cars would relocate at the same exact time.
+                    </p>
+                    
+                    <p>
+                        <strong>Application example;</strong> A publicly traded company’s stock is never a static thing, even when prices are relatively stable and there isn’t an overall trend, and there are minute fluctuations over time. If the stock price remained at exactly the same price (to the penny) for an extended period of time, then that would be a collective outlier. In fact, this very thing occurred to not one, but several tech companies on July 3 of this year on the Nasdaq exchange when the stock prices for several companies – including tech giants Apple and Microsoft – were listed as $123.45.
+                    </p> 
+                </li>
+
+                    <ol type="a">
+                        <p>
+                            <strong class="special">Effects of outliers on the data sets</strong>
+                        </p>
+                        <li>
+                            <strong>Affects the normality</strong> - If the outliers are non-randomly distributed, they can decrease normality.
+                        </li>
+                        <li>
+                            <strong>Reduce power of tests</strong> - It increases the error variance and reduces the power of statistical tests.
+                        </li>
+                        <li>
+                            <strong>Inaccurate estimates</strong> - They can cause bias and/or influence estimates.
+                        </li>
+                        <li>
+                            <strong>Distort assumptions</strong> - They can also impact the basic assumption of regression analyses, ANOVA, as well as other statistical models.
+                        </li>
+                        <li>
+                            <strong>Affects ML algorithm accuracy</strong> - Outliers can affect the accuracy of ML algorithms and scaling would reduce the effect.
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+            <p>
+                <strong class="special">About the Author</strong>
+            </p>
+            <p>
+                <strong>Galm Dida - Training coordinator (Consuldata and Research Centre)</strong> - I am passionate of
+                driving insight from data to help business make informed decision to increase productivity and reduce risk. Currently supporting over 30
+                students in the country and beyond in learning data tools and applications to support business decisions. Join us as we create data community and solve problems through insights.
+            </p>
+            <p>
+                <strong class="special">Contact</strong>
+            </p>
+            <p>
+                Tell: 0741370493 ||
+                email: <a href="mailto:galmdida15@gmail.com">Send me an email</a> ||
+                whatsapp: <a href="https://wa.me/254741370493">WhatsApp Me</a>
+            </p>
+
+            <p>
+                <strong class="special">Quick links</strong>
+            </p>
+            <p>
+                <a href="https://galmdida.github.io/dida/normality.html" class="quick-link">Learn Normality test in Python</a>
+            </p>
+            <p>
+                <a href="https://galmdida.github.io/dida/non-normality.html" class="quick-link">Learn what to do if your data deviate from normality</a>
+            </p>
+            
+            <p>
+                <strong class="special">Coming up</strong>
+            </p>
+            <p>
+                In our next blog, we will be discussing "Outlier detection in Python"
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <ul id="footer">
+                <h2>Important Links</h2>
+                <li class="footer">
+                    <a href="/">Home</a>
+                </li>
+                <li class="footer">
+                    <a href="/services.html">Services</a>
+                </li>
+                <li class="footer">
+                    <a href="/projects.html">Projects</a>
+                </li>
+                <li class="footer">
+                    <a href="/services.html">About</a>
+                </li>
+            </ul>
+            <ul id="footer">
+                <h2>Social Media</h2>
+                <li>
+                    <a href="https://wa.me/254741370493"><img src="icons/whatsapp ico.PNG" alt="whatsapp"></a>
+                </li>
+                <li>
+                    <a href=""><img src="icons/facebook.png" alt="facebook"></a>
+                </li>
+                <li>
+                    <a href=""><img src="icons/insta.png" alt="instagram"></a>
+                </li>
+            </ul>
+            <ul id="footer">
+                <h2>Contact Details</h2>
+                <li>
+                    Office: Mwalimu Hotel, Kisii
+                </li>
+                <li>
+                    Tell: +254741370493
+                </li>
+                <li>
+                    Working Hours: 9am - 4pm EAT
+                </li>
+            </ul>
+        </div>
+        <p>
+            Galm Dida &#169; 2024
+        </p>
+    </footer>
+
+</body>
+
+</html>
