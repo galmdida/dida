@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="outlier-detection1-graphical-method.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/school-book.min.css">
+
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>Normality</title>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <a href="index.html" id="logo">Galm Dida</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Mentorship
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Career</a>
+                        <a href="finance.html">Finance</a>
+                        <a href="#">Wellness</a>
+                        <a href="#">My Books</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="training.html">Training</a>
+                        <a href="mande.html">M&E</a>
+                        <a href="research.html">Research Support</a>
+                        <a href="bus-support.html">Business Support</a>
+                        <a href="graphic-design.html">Graphics and Design</a>
+                        <a href="web-design.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Adv. Excel</a>
+                        <a href="#">SQL</a>
+                        <a href="#">Power BI</a>
+                        <a href="#">SPSS</a>
+                        <a href="#">Python</a>
+                        <a href="#">NVivo</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphic Design</a>
+                        <a href="projects.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#side-drawer" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+
+
+    <aside id="side-drawer">
+        <header>
+            <a href="#" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/about.html">About</a>
+                </li>
+                <li>
+                    <a href="/blog.html">Blog</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Mentorship
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Career</a>
+                        <a href="finance.html">Finance</a>
+                        <a href="#">Wellness</a>
+                        <a href="#">My Books</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="training.html">Training</a>
+                        <a href="mande.html">M&E</a>
+                        <a href="research.html">Research Support</a>
+                        <a href="bus-support.html">Business Support</a>
+                        <a href="graphic-design.html">Graphics and Design</a>
+                        <a href="web-design.html">Website Design</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects
+                        <i class="arrow down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Adv. Excel</a>
+                        <a href="#">SQL</a>
+                        <a href="#">Power BI</a>
+                        <a href="#">SPSS</a>
+                        <a href="#">Python</a>
+                        <a href="#">NVivo</a>
+                        <a href="#">M&E</a>
+                        <a href="#">Research</a>
+                        <a href="#">Business Support</a>
+                        <a href="#">Graphic Design</a>
+                        <a href="projects.html">Website Design</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section id="normality">
+            <h1>OUTLIER DETECTION IN PYTHON</h1>
+            <img src="norm-blog/outliers2.PNG" alt="" class="first-img">
+            <h2>Graphical methods for outlier detection</h2>
+            <p>
+                <strong>Outliers</strong> are difficult to detect by a “naked” eye unless you are analyzing data about
+                which you have great field expertise. Fortunately, there are some visualization tools that can help with
+                this task. The most common are histograms, box plots and scatter plot. We will see an example of each
+                one.
+            </p>
+
+            <ol type="i">
+                <li>
+                    <strong>Histogram</strong> - is among commonly used plot to quickly check the presence of outliers in the data set.
+
+                    In the histogram, the data is divided into a pre-specified number of groups called bins. The data is
+                    then sorted into each bin and the count of the number of observations in each bin is retained.
+
+                    The plot shows the bins across the x-axis maintaining their ordinal relationship, and the count in
+                    each bin on the y-axis.
+
+                    An isolated bin which appears on the left or right of the central bins causing negative or possitive skew respectively can be seen as a possible outlier.
+
+                    A histogram can be created using the matplotlib function in Python which by default estimates the
+                    number of bins from the data sample.
+
+                    See the code snippet for drawing histogram to check the presence of outliers in the selected numerical variables in
+                    the data.
+                    <pre>
+                        <code>
+# For multiple histogram with density curve
+fig, (ax1, ax2) = plt.subplots(2, figsize=(10, 12)) # Creating subplots with 2 rows and 1 column
+                            
+                            
+sns.histplot(data=breast_cancer, x="perimeter_worst", kde=True, color="blue", ax=ax1) # , ax=axs[0, 0]
+sns.histplot(data=breast_cancer, x="area_worst", kde=True, color="purple", ax=ax2) #, ax=axs[0, 1]
+                            
+                            
+sns.set_theme(style="darkgrid")
+                            
+plt.suptitle("Histogram for perimeter worst and area worst",color = "red")
+                            
+fig.tight_layout() # Showing more data points
+                            
+plt.show()
+                        </code>
+                    </pre>
+                    <img src="outlier-img/histogram.PNG" alt="" class="test-img1">
+                    <p>
+                        <span class="conclusion">Conclusion</span> - There seem to be outliers in both "perimeter worst" and "area worst" variables. Both outliers seem to be on the right side making the data to be positively skewed.
+                        "Area worst" variable seem to have more extreme outlier(s) as the tail is longer and the bar is far much isolated from the central bars.
+                    </p>
+                </li>
+                <li>
+                    <strong>Box Plot</strong> - or boxplot (also known as a box and whisker plot) is a type of chart
+                    often used in explanatory data analysis. Box plots visually show the distribution of numerical data
+                    and skewness by displaying the data quartiles (or percentiles) and averages. It is the easiest way yo grasp valuable information about your data's outliers.
+
+                    <p>
+                        Before checking the outliers for the variables, let's understand the components of outliers.
+                    </p>
+
+                    <img src="outlier-img/boxplot-exampl.PNG" alt="" class="test-img2">
+
+                    <p>
+                        From the above figure;
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>
+                                Q1
+                            </strong> - First quartile/ 25th percentile, 25% of data is below this point.
+                        </li>
+                        <li>
+                            <strong>
+                                Median
+                            </strong> - It is like second quartile/ 50th percentile, but we usually don't call it second quartile, instead median. It is the central value of the data set. 50% of the data is below this point.
+                        </li>
+                        <li>
+                            <strong>
+                                Q3
+                            </strong> - Third quartile/ 75th percentile, 75% of the data points is below this point.
+                        </li>
+                        <li>
+                            <strong>
+                                Minimum
+                            </strong> - The data point with the smallest value in the data set that isn’t an outlier.
+                        </li>
+                        <li>
+                            <strong>
+                                Maximum
+                            </strong> - The data point with the largest value in the data set that isn’t an outlier.
+                        </li>
+                        <li>
+                            <strong>
+                                IQR
+                            </strong> - Interquartile range, Represents all the values between Q1 and Q3.
+                        </li>
+                        <li>
+                            <strong>
+                                Outliers
+                            </strong> - The value below minimum value of the data set (outlier is, "<'Q1-1.5*IQR") or above the maximum value of the data set, (outlier is, ">Q3+1.5*IQR").
+                        </li>
+                    </ul>
+
+                    See the code snippet for drawing boxplot to test the outliers in selected numerical variables of
+                    our data.
+                    <pre>
+                            <code>
+# Box plot with matplotlib
+perimeter_worst = breast_cancer["perimeter_worst"]
+area_worst = breast_cancer['area_worst']
+                                
+columns = [perimeter_worst, area_worst]
+fig, axe = plt.subplots()
+box = axe.boxplot(columns, notch=True, patch_artist=True)
+plt.xticks([1, 2], ["perimeter_worst", "area_worst"])
+                                
+colours = ['#0000FF', '#00FF00']
+# for patch, colour in zip(box['boxes'], colours):
+# patch.set_facecolour(colour)
+                                
+plt.title("Boxplot for perimeter worst and area worst", color = "red", fontsize = 15)
+                                
+plt.semilogy()
+                            </code>
+                        </pre>
+                    <img src="outlier-img/boxplot.PNG" alt="" class="test-img">
+                    <p>
+                        <span class="conclusion">Conclusion</span> - Just by looking at the BoxPlots, we can see that the variables 'perimeter worst' and 'area worst' have outliers.
+                        The variable 'perimeter worst' has some outliers in the upper bound, and the variable 'area worst' has more and far outliers in the upper bound, which suggests a skewed distribution.
+                        The result is similar as the ones we have seen with histograms.
+                    </p>
+                </li>
+                <li>
+                    <strong>Scatter plot</strong> - Scatter plot shows the joint outliers in two variables.
+                    It helps in identfying possible multivariate outliers, for example, we expect the area worst and perimeter worst to be in limits for all the cancerous breasts, just like the height and weight of an individuals in our introduction. The area worst might not be an outlier and perimeter worst might not be an outlier, but their combination can be an outlier.
+
+                    See the code snippet for drawing scatter plot to outliers in selected numerical variables of
+                    our data.
+                    <pre>
+                            <code>
+# Create scatter plot with plotly express (px)
+fig = px.scatter(breast_cancer, x="perimeter_worst", y="area_worst")
+fig.show()
+                            </code>
+                        </pre>
+                    <img src="outlier-img/scatter.PNG" alt="" class="test-img">
+                    <p>
+                        <span class="conclusion">Conclusion</span> - As very clearly visible in the graph, the 'area worst' variable is concentrated more within the range of 0–3000.
+                        Similarly, most of the 'perimeter worst' is below 200
+                        The points above 4000 for 'area worst' and above 250 for 'perimeter worst' are very likely to be outliers as these can result to disproportionate stats about the overall structure of the data.
+                </li>
+            </ol>
+            <p>
+                <strong class="special">About the Author</strong>
+            </p>
+            <p>
+                <strong>Galm Dida - Training coordinator (Consuldata and Research Centre)</strong> - I am passionate of
+                driving insight from data to help business make informed decision to increase productivity and reduce risk. Currently supporting over 30
+                students in the country and beyond in learning data tools and applications to support business decisions. Join us as we create data community and solve problems through insights.
+            </p>
+            <p>
+                <strong class="special">Contact</strong>
+            </p>
+            <p>
+                Tell: 0741370493 ||
+                email: <a href="mailto:galmdida15@gmail.com">Send me an email</a> ||
+                whatsapp: <a href="https://wa.me/254741370493">WhatsApp Me</a>
+            </p>
+
+            <p>
+                <strong class="special">Quick links</strong>
+            </p>
+            <p>
+                <a href="https://galmdida.github.io/dida/normality.html" class="link-for-more">Learn Normality test in Python</a>
+            </p>
+            <p>
+                <a href="https://galmdida.github.io/dida/non-normality.html" class="link-for-more">Learn what to do if your data deviate from normality</a>
+            </p>
+            <p>
+                <a href="https://galmdida.github.io/dida/outliers.html" class="link-for-more">Introduction to outliers</a>
+            </p>
+            
+            <p>
+                <strong class="special">Coming up</strong>
+            </p>
+            <p>
+                In our next blog, we will be discussing "Hypothesis testing for outlier detection"
+            </p>
+        </section>
+    </main>
+
+
+    <footer>
+        <div id="footer-content">
+            <ul id="footer">
+                <h2>Important Links</h2>
+                <li class="footer">
+                    <a href="/">Home</a>
+                </li>
+                <li class="footer">
+                    <a href="/services.html">Services</a>
+                </li>
+                <li class="footer">
+                    <a href="/projects.html">Projects</a>
+                </li>
+                <li class="footer">
+                    <a href="/services.html">About</a>
+                </li>
+            </ul>
+            <ul id="footer">
+                <h2>Social Media</h2>
+                <li>
+                    <a href="https://wa.me/254741370493"><img src="icons/whatsapp ico.PNG" alt="whatsapp"></a>
+                </li>
+                <li>
+                    <a href=""><img src="icons/facebook.png" alt="facebook"></a>
+                </li>
+                <li>
+                    <a href=""><img src="icons/insta.png" alt="instagram"></a>
+                </li>
+            </ul>
+            <ul id="footer">
+                <h2>Contact Details</h2>
+                <li>
+                    Office: Mwalimu Hotel, Kisii
+                </li>
+                <li>
+                    Tell: +254741370493
+                </li>
+                <li>
+                    Working Hours: 9am - 4pm EAT
+                </li>
+            </ul>
+        </div>
+        <p>
+            Galm Dida &#169; 2024
+        </p>
+    </footer>
+
+</body>
+
+</html>
